@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Heart Belongs to You</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff0f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            scroll-behavior: smooth;
+        }
+        
+        header {
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            padding: 1rem;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        
+        .message {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+        
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 0 0 2rem 0;
+        }
+        
+        .photo-container {
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+            height: 300px;
+        }
+        
+        .photo-container:hover {
+            transform: scale(1.02);
+        }
+        
+        .photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0,0,0,0.6);
+            color: white;
+            padding: 0.5rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .photo-container:hover .caption {
+            transform: translateY(0);
+        }
+        
+        .heart {
+            display: inline-block;
+            color: #ff4d6d;
+            font-size: 1.5rem;
+            animation: heartbeat 1.5s infinite;
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .button {
+            display: inline-block;
+            background-color: #ff4d6d;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-top: 1rem;
+        }
+        
+        .button:hover {
+            background-color: #ff758c;
+            transform: translateY(-3px);
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        
+        #countdown {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+        
+        .milestones {
+            margin: 2rem 0;
+        }
+        
+        .milestone {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .special-memories {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>我的心属于你</h1>
+        <p class="subtitle">我们爱的旅程...</p>
+    </header>
+
+    <div class="container">
+        <h2>我们美好的瞬间</h2>
+        <div class="photo-gallery">
+            <div class="photo-container">
+                <img src="images/photo1.jpeg" alt="我们的照片1" class="photo">
+                <div class="caption">城市天际线下的你</div>
+            </div>
+            <div class="photo-container">
+                <img src="images/photo2.jpeg" alt="我们的照片2" class="photo">
+                <div class="caption">柔和室内光下的你</div>
+            </div>
+            <div class="photo-container">
+                <img src="images/photo3.jpeg" alt="我们的照片3" class="photo">
+                <div class="caption">海边夜色中的你</div>
+            </div>
+            <div class="photo-container">
+                <img src="images/photo4.jpeg" alt="我们的照片4" class="photo">
+                <div class="caption">樱花枝影下的你</div>
+            </div>
+            <div class="photo-container">
+                <img src="images/photo5.jpeg" alt="我们的照片5" class="photo">
+                <div class="caption">彩灯交织中的你</div>
+            </div>
+            <div class="photo-container">
+                <img src="images/photo6.jpeg" alt="我们的照片6" class="photo">
+                <div class="caption">窗边自然光下的你</div>
+            </div>
+            <div class="photo-container">
+                <img src="images/photo7.jpeg" alt="我们的照片7" class="photo">
+                <div class="caption">暮色树影间的你</div>
+            </div>
+            <div class="photo-container">
+                <img src="images/photo8.jpeg" alt="我们的照片8" class="photo">
+                <div class="caption">海滩阳光里的你</div>
+            </div>
+            <div class="photo-container">
+                <img src="images/photo9.jpeg" alt="我们的照片8" class="photo">
+                <div class="caption">与狗狗互动的你</div>
+            </div>
+        </div>
+
+        <div class="message">
+            <h2>致我生命中最amazing的人 <span class="heart">❤</span></h2>
+            <p>自从你走进我的生活，一切都变得更加明亮、有意义，充满欢乐。你的微笑点亮我的每一天，你的笑声是我最喜欢的声音，有你在身边，我的世界才完整。</p>
+            <p>这个网页献给你，献给我们一起创造的美好回忆。</p>
+        </div>
+        
+        <div class="milestones">
+            <h2>我们的特别时刻</h2>
+            <div class="milestone">
+                <h3>我们初次相遇</h3>
+                <p>2025年2月19日，改变一切的日子 - 从第一刻起，我就知道你是特别的。</p>
+            </div>
+            <div class="milestone">
+                <h3>我们的第一次约会</h3>
+                <p>那天我非常紧张，但你的微笑让我放松下来。我们聊了很久，我希望那一天永远不要结束。</p>
+            </div>
+            <div class="milestone">
+                <h3>我确定的那一天</h3>
+                <p>那个完美的时刻，我意识到我已经完全爱上了你。</p>
+            </div>
+        </div>
+
+        <div class="special-memories">
+            <h2>为什么我爱你</h2>
+            <ul>
+                <li>你对每个人的善良和同情心</li>
+                <li>你笑起来时眼睛闪闪发光的样子</li>
+                <li>你总是知道说什么能让我感觉更好</li>
+                <li>你的决心和坚强</li>
+                <li>你让平凡的日子变得非凡</li>
+            </ul>
+        </div>
+
+        <div id="countdown">
+            <h2>我们初次相见的日子</h2>
+            <p>2025年2月19日晚上7点 - 我们故事的开始...</p>
+            <div id="timer">00:00:00:00</div>
+            <script>
+                // Set the date to your first meeting - February 19, 2025 at 7:00 PM
+                const countDownDate = new Date("Feb 19, 2025 19:00:00").getTime();
+                
+                // Update the count down every 1 second
+                const x = setInterval(function() {
+                    // Get today's date and time
+                    const now = new Date().getTime();
+                    
+                    // Find the distance between now and the count down date
+                    const distance = countDownDate - now;
+                    
+                    // Time calculations for days, hours, minutes and seconds
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    
+                    // Display the result
+                    document.getElementById("timer").innerHTML = days + ":" + hours + ":" + minutes + ":" + seconds;
+                    
+                    // If the count down is finished
+                    if (distance < 0) {
+                        clearInterval(x);
+                        document.getElementById("timer").innerHTML = "Today is our special day!";
+                    }
+                }, 1000);
+            </script>
+        </div>
+
+        <div>
+            <p>与你在一起的每一天都是礼物，我期待着与你一起创造更多的美好回忆。</p>
+            <p>我爱你，胜过言语所能表达的一切。</p>
+            <a href="#" class="button" onclick="showMessage()">点击这里 ❤</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>永远爱你，一生一世。</p>
+    </footer>
+
+    <script>
+        function showMessage() {
+            alert("我全心全意地爱你！你愿意永远做我的女孩吗？");
+        }
+    </script>
+
+</body>
+</html>
